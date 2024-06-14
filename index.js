@@ -1,13 +1,13 @@
-const {server, plugins} = require('./server');
+const { server, plugins } = require("./server");
 
 (async () => {
-    try {
-        //register routes plugins
-        await server.register(plugins);
-
-        await server.start();
-        console.log("Server listening: " + server.info.uri);
-    } catch (error) {
-        console.log(error);
-    }
+  try {
+    await server.register(plugins);
+    await server.start();
+    console.log("Server listening: " + server.info.uri);
+    console.log(`Swagger documentation at: ${server.info.uri}/docs`);
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
+  }
 })();

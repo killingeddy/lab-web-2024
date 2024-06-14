@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   postgres:
-    container_name: lab-web2
+    container_name: lab-web-postgres
     image: postgres
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-fatec}

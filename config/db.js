@@ -7,6 +7,6 @@ const sequelizeConfig = {
     logging: console.log
 };
 
-const sequelize = new Sequelize('aula', 'fatec', 'fatec', sequelizeConfig);
+const sequelize = new Sequelize('postgres', 'fatec', 'fatec', sequelizeConfig);
 
 module.exports = {sequelize};
